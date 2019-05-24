@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="302.0" prefWidth="631.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FXVacationRentalController">
+   <top>
+      <Label text="Lambert's Vacation Rentals" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <VBox prefHeight="84.0" prefWidth="186.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Select rentals location:" />
+            <RadioButton fx:id="parksideRadio" mnemonicParsing="false" text="parkside" />
+            <RadioButton fx:id="poolsideRadio" mnemonicParsing="false" text="poolside" />
+            <RadioButton fx:id="lakesideRadio" mnemonicParsing="false" text="lakeside" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="145.0" prefWidth="426.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Enter number of bedrooms:" />
+            <ChoiceBox fx:id="bedroomsChoice" prefWidth="150.0" />
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <VBox prefHeight="145.0" prefWidth="196.0" BorderPane.alignment="CENTER">
+         <children>
+            <CheckBox fx:id="chkMeals" mnemonicParsing="false" text="Include meals" />
+            <Button fx:id="btnSubmit" mnemonicParsing="false" onAction="#btnSubmitOnClick" text="Submit" />
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <TextArea fx:id="txtResult" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
